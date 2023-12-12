@@ -56,6 +56,7 @@ Start the web server and run the tests on Microsoft Edge in headless mode.
 
 After the tests finish running they will generate a folder called 'allure-results' which contains the result of the execution. To see this results we will need Allure, if we use the following command for the first time:
 ```sh
+npm install -g allure-commandline --save-dev
 npx allure-commandline serve
 ```
 Node will promopt us to install the tool allure-commandline which will allow use to generete an allure report everytime we use the command and we are in the same directory as the folder allure-results.
