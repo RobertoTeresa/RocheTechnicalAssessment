@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open",
+    "startServer": "http-server ./app",
+    "startTestChrome": "npx cypress run --browser chrome --env allure=true",
+    "startTestChromeHead": "npx cypress run --headed --browser chrome --env allure=true",
+    "startTestFirefox": "npx cypress run --browser firefox --env allure=true",
+    "startTestEdge": "npx cypress run --browser edge --env allure=true",
+    "chromeTest": "concurrently \"npm run startServer\" \"npm run startTestChrome\"",
+    "chromeHeadTest": "concurrently \"npm run startServer\" \"npm run startTestChromeHead\"",
+    "firefoxTest": "concurrently \"npm run startServer\" \"npm run startTestFirefox\"",
+    "edgeTest": "concurrently \"npm run startServer\" \"npm run startTestEdge\""
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "concurrently": "^8.0.1",
+    "cypress": "^12.13.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
